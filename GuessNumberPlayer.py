@@ -11,14 +11,14 @@ def getGuesses(max_guesses, curr_guess, name, range):
         try:
             pick =  int(input("Please enter your guess!\n"))
              
-            if pick < range[0] and pick > range[1]:
+            if pick < range[0] or pick > range[1]:
                 print(f"Please enter a different guess between {range[0]} and {range[1]}")
             else:
                 if pick > answer:
-                    print(f"Guess again! Lower!" )
+                    print(f"Guess again! Lower!\n" )
                     curr_guess+=1
                 elif pick < answer:
-                    print(f"Guess again! Lower!" )
+                    print(f"Guess again! Higher!\n" )
                     curr_guess+=1
                 else:
                     print(f"{name} You won!!!!!!!!! ")
@@ -44,11 +44,3 @@ tup_range = (start_range, end_range)
 getGuesses(max_guesses, curr_guess, name, tup_range)
 
 print("\n================================")
-
-
-
-
-
-
-                
-                
