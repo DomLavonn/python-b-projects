@@ -1,6 +1,5 @@
 import random 
 
-
 def main():
     rps = ["rock", "paper", "scissors"]
     comp_pick = rps[random.randint(0, len(rps))]
@@ -8,8 +7,7 @@ def main():
     user_pick = rps[int(input("Enter rock paper or scissors"))]
     
     winner(user_pick, comp_pick)
-
-    
+ 
 def winner(upick, cpick):
     if upick =='rock' and  cpick == 'scissors':
         print("rock win! Player 1")
@@ -22,3 +20,4 @@ def winner(upick, cpick):
         
 if __name__ == '__main__':
     main()
+    
